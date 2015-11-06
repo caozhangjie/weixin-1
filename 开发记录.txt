@@ -1,4 +1,0 @@
-2015.10.23 晚19：00--22：00
-    1. 创建了个人微信测试号
-    2. 分别使用框架python+Django与python+Flask进行试验，最终明确框架为python+Django
-    3. 参考链接：http://www.ziqiangxuetang.com/django/python-django-weixin.html 实现了一个简单地手机与微信测试号的连接
