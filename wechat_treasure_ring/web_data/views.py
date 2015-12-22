@@ -7,7 +7,7 @@ from wechat_response.data import *
 import json
 import time
 
-
+@csrf_exempt
 def ifregistered(request, openid):
     if RingUser.objects.filter(user_id=openid).exists():
         user = RingUser.objects.filter(user_id=openid)[0]

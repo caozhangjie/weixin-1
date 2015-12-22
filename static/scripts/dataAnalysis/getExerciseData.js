@@ -64,7 +64,6 @@ function renderByJson(json){
 	setDataText("30-days-speed-avg", json["30-days-speed-avg"], "");
 	setDataText("7-days-calories-avg", json["7-days-calories-avg"], "");
 	setDataText("30-days-calories-avg", json["30-days-calories-avg"], "");
-	setExpertiseAdvise(json["yesterday-intensity"], json["7-days-intensity"]);
 }
 
 //draw a chart
@@ -87,8 +86,7 @@ function drawChart(data, dataLength, chartId){
 
 //set the advise
 function setExpertiseAdvise(yesterdayIntensity, sevenDayIntensity){
-	var expertiseString = "";
-	$("#expertise-advise").text(expertiseString);
+
 }
 //set data according to the data, "suffix" is the unit
 function setDataText(idString, data, suffix){

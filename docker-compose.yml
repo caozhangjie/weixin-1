@@ -7,15 +7,15 @@ wechat_treasure_ring:
     - DB_USER=wechat_treasure_ring
     - DB_PASSWORD=$WECHAT_PASSWORD
     - DB_PORT=3306
-    - SECRET_KEY=$WECHAT_SECRET_KEY
+    - SECRET_KEY=$SECRET_KEY
     - SITE_DOMAIN=$SITE_DOMAIN
+    - APP_ID=$APP_ID
+    - APP_SECRET=$APP_SECRET
   links:
     - db
   volumes:
     - ./static:/usr/src/app/wechat_treasure_ring/static
   privileged: true
-  ports:
-    - "8000:8000"
   restart: always
 db:
   image: mysql/mysql-server:5.7
@@ -27,8 +27,6 @@ db:
   volumes:
     - ./datadir:/var/lib/mysql
     - ./my.cnf:/etc/my.cnf
-  ports:
-    - "3306:3306"
   restart: always
 web:
   image: nginx:1.9.8
@@ -39,5 +37,5 @@ web:
   links:
     - wechat_treasure_ring
   ports:
-    - "80:80"
+    - "4705:80"
   restart: always
