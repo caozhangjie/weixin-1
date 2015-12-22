@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>HTML5 Doodle Jump</title>
+    <link rel="stylesheet" href="dodojump/style.css">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+    <script src="dodojump/prefixfree.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+
+      <canvas id="canvas">
+        Aww, your browser doesn't support HTML5!
+      </canvas>
+
+      <div id="mainMenu">
+        <h1>Dodo jump</h1>
+        <h3>...by treasure ring team</h3>
+
+        <a class="button" href="javascript:init()">Play</a>
+      </div>
+
+      <div id="gameOverMenu">
+        <h1>game over!</h1>
+        <h3 id="go_score">you scored 0 points</h3>
+
+        <a class="button" href="javascript:reset()">Restart</a>
+        <a id="tweetBtn" target="_blank" class="button tweet" href="#">Tweet score</a>
+
+        <a id="fbBtn" target="_blank" class="button fb" href="#">Post on FB</a>
+      </div>
+
+      <!-- Preloading image ;) -->
+      <img id="sprite" src="dodojump/sprite.png"/>
+
+      <div id="scoreBoard">
+        <p id="score">0</p>
+      </div>
+
+    </div>
+    <div class="container">
+        <hr />
+        <p style="font-size:xx-small;text-align: center">CopyRight &copy; 2015 珍环传</p>
+        <p style="font-size:xx-small;text-align: center">All Rights Reserved</p>
+    </div> <!-- /container -->
+    <script src="dodojump/main.js"></script>
+  </body>
+</html>
